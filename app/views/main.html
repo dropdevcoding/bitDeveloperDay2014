@@ -1,17 +1,17 @@
 <h1>Lagerverwaltung <small>Eine Beispiel-App</small></h1>
 <div class="row">
     <div class="col-xs-12">
-        <form role="form" action="#" method="POST" name="store">
+        <form role="form" name="store" ng-submit="submitProduct()">
             <fieldset>
                 <div class="row">
-                    <div class="form-group col-xs-9">
+                    <div class="col-xs-3">
+                        <button type="button" ng-click="addEmpty()" class="btn btn-success">Anlegen</button>
+                    </div>
+                    <div class="form-group col-xs-9" ng-show="emptyProduct">
                         <div class="input-group">
                             <span class="input-group-addon">Produktname</span>
-                            <input type="text" class="form-control" />
+                            <input type="text" class="form-control" ng-model="emptyProduct.name" />
                         </div>
-                    </div>
-                    <div class="col-xs-3">
-                        <button type="button" class="btn btn-success">Anlegen</button>
                     </div>
                 </div>
             </fieldset>
@@ -21,5 +21,8 @@
 <div class="row">
     <div class="col-xs-12">
         <h2>aktuell vorhandene Produkte</h2>
+        <ul class="list-group" ng-show="products.length >= 1">
+            <li class="list-group-item" ng-repeat="product in products">{{ product.name }}<button type="button" class="close" ng-click="removeProduct($index)"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button></li>
+        </ul>
     </div>
 </div>
