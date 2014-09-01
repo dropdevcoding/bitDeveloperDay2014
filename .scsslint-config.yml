@@ -1,0 +1,10 @@
+# bitExpert specific scsslint configuration
+linters:
+  Indentation:
+    enabled: true
+    character: space # or 'tab'
+    width: 4
+
+  SpaceBetweenParens:
+    enabled: true
+    spaces: 1

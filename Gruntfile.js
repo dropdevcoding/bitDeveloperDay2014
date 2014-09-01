@@ -203,6 +203,16 @@ module.exports = function (grunt) {
         }
       }
     },
+    
+    scsslint: {
+        allFiles: [
+            'app/styles/*.scss'
+        ],
+        options: {
+            config: '.scsslint-config.yml',
+            colorizeOutput: true
+        }
+    },
 
     // Renames files for browser caching purposes
     filerev: {
@@ -392,7 +402,7 @@ module.exports = function (grunt) {
     githooks: {
         all: {
             // Will run the jshint and test:unit tasks at every commit
-            'pre-commit': 'test'
+            'pre-commit': 'commit-hook'
         }
     }    
   });
@@ -441,6 +451,11 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+  ]);
+  
+  grunt.registerTask('commit-hook', [
+      'test',
+      'scsslint'
   ]);
 
   grunt.registerTask('default', [
