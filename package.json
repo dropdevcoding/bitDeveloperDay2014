@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
+    "bitexpert-grunt-jshint": "git+https://git.bitexpert.net/02003-bitExpertLabs-17-GruntJsHint.git#v0.1.3",
+    "bitexpert-jscs": "git+https://git.bitexpert.net/02003-bitExpertLabs-16-JsCodeSniffer.git#v0.2.0",
     "grunt": "^0.4.1",
     "grunt-autoprefixer": "^0.7.3",
     "grunt-concurrent": "^0.5.0",
@@ -19,23 +21,22 @@
     "grunt-filerev": "^0.2.1",
     "grunt-githooks": "^0.3.1",
     "grunt-google-cdn": "^0.4.0",
+    "grunt-jscs": "0.7.x",
     "grunt-karma": "^0.8.3",
     "grunt-newer": "^0.7.0",
     "grunt-ngmin": "^0.0.3",
+    "grunt-notify": "^0.3.1",
     "grunt-scss-lint": "^0.3.3",
     "grunt-svgmin": "^0.4.0",
     "grunt-usemin": "^2.1.1",
     "grunt-wiredep": "^1.7.0",
+    "jshint-jenkins-checkstyle-reporter": "0.1.x",
     "jshint-stylish": "^0.2.0",
     "karma": "^0.12.23",
     "karma-jasmine": "^0.1.5",
     "karma-phantomjs-launcher": "^0.1.4",
     "load-grunt-tasks": "^0.4.0",
-    "time-grunt": "^0.3.1",
-    "grunt-jscs": "0.7.x",
-    "jshint-jenkins-checkstyle-reporter": "0.1.x",
-    "bitexpert-jscs": "git+https://git.bitexpert.net/02003-bitExpertLabs-16-JsCodeSniffer.git#v0.1.3",
-    "bitexpert-grunt-jshint": "git+https://git.bitexpert.net/02003-bitExpertLabs-17-GruntJsHint.git#v0.1.2"
+    "time-grunt": "^0.3.1"
   },
   "engines": {
     "node": ">=0.10.0"

@@ -25,6 +25,15 @@ module.exports = function (grunt) {
     grunt.initConfig({
         // Project settings
         yeoman: appConfig,
+
+        // This is optional!
+        notify_hooks: {
+            options: {
+                enabled: true,
+                max_jshint_notifications: 5 // maximum number of notifications from jshint output
+            }
+        },
+
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             bower: {
@@ -173,7 +182,6 @@ module.exports = function (grunt) {
             },
             all: {
                 src: [
-                    'Gruntfile.js',
                     '<%= yeoman.app %>/scripts/{,*/}*.js'
                 ]
             },
