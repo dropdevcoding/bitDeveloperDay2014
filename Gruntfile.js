@@ -63,7 +63,8 @@ module.exports = function (grunt) {
                 ],
                 tasks: [
                     'compass:server',
-                    'autoprefixer'
+                    'autoprefixer',
+                    'scsslint'
                 ]
             },
             gruntfile: {
@@ -259,6 +260,17 @@ module.exports = function (grunt) {
                 }
             }
         },
+
+        scsslint: {
+            allFiles: [
+                '<%= yeoman.app %>/styles/{,*/}*.scss'
+            ],
+            options: {
+                config: '.scsslint-config.yml',
+                colorizeOutput: true
+            }
+        },
+
         // Renames files for browser caching purposes
         filerev: {
             dist: {
@@ -489,7 +501,12 @@ module.exports = function (grunt) {
         'jscs:test',
         'jshint:all',
         'jscs:all',
+        'scsslint',
         'test'
+    ]);
+
+    grunt.registerTask('commit-hook', [
+        'qa'
     ]);
 
     grunt.registerTask('test', [
