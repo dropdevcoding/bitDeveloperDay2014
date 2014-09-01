@@ -14,7 +14,6 @@
     "grunt-contrib-cssmin": "^0.9.0",
     "grunt-contrib-htmlmin": "^0.3.0",
     "grunt-contrib-imagemin": "^0.7.0",
-    "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-uglify": "^0.4.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-filerev": "^0.2.1",
@@ -31,7 +30,11 @@
     "karma-jasmine": "^0.1.5",
     "karma-phantomjs-launcher": "^0.1.4",
     "load-grunt-tasks": "^0.4.0",
-    "time-grunt": "^0.3.1"
+    "time-grunt": "^0.3.1",
+    "grunt-jscs": "0.7.x",
+    "jshint-jenkins-checkstyle-reporter": "0.1.x",
+    "bitexpert-jscs": "git+https://git.bitexpert.net/02003-bitExpertLabs-16-JsCodeSniffer.git#v0.1.3",
+    "bitexpert-grunt-jshint": "git+https://git.bitexpert.net/02003-bitExpertLabs-17-GruntJsHint.git#v0.1.2"
   },
   "engines": {
     "node": ">=0.10.0"
