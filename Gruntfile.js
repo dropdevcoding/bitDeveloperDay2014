@@ -505,16 +505,16 @@ module.exports = function (grunt) {
         'test'
     ]);
 
-    grunt.registerTask('commit-hook', [
-        'qa'
-    ]);
-
     grunt.registerTask('test', [
         'clean:server',
         'concurrent:test',
         'autoprefixer',
         'connect:test',
         'karma'
+    ]);
+
+    grunt.registerTask('commit-hook', [
+        'qa'
     ]);
 
     grunt.registerTask('build', [
