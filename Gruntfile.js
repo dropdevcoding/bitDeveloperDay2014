@@ -46,7 +46,7 @@ module.exports = function (grunt) {
       },
       compass: {
         files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server', 'autoprefixer']
+        tasks: ['compass:server', 'autoprefixer', 'scsslint']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -206,7 +206,7 @@ module.exports = function (grunt) {
     
     scsslint: {
         allFiles: [
-            'app/styles/*.scss'
+            '<%= yeoman.app %>/styles/{,*/}*.scss'
         ],
         options: {
             config: '.scsslint-config.yml',
